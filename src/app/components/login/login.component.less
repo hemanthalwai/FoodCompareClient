@@ -1,0 +1,59 @@
+.block {
+    display: block;
+}
+input.med{
+    line-height: 40px;
+    width: 20%;
+}
+.mat-card {
+    padding: 3% 2% 3% 18%;
+    right: 4%;
+    min-height: 28vh;
+}
+.button-padding{
+    padding: 0.2em 3em;
+}
+.background-wallpaper::hover {
+    animation-play-state:running;
+    animation: chbg 10s  infinite;
+}
+.background-wallpaper {
+    background-image: url('https://previews.123rf.com/images/ferli/ferli1511/ferli151100467/48633543-a-portrait-of-various-indian-food-buffet-collage.jpg');
+    // background-image: url('https://thumbs.dreamstime.com/b/indian-food-collage-portrait-various-buffet-62770881.jpg');
+    // background-image: url('https://as1.ftcdn.net/jpg/02/95/79/40/500_F_295794094_FYz9UTEoBSxqIiLzs5P2kABflTIF0xG5.jpg');
+}
+@keyframes chbg {
+    0% {
+      background:url('https://previews.123rf.com/images/ferli/ferli1511/ferli151100467/48633543-a-portrait-of-various-indian-food-buffet-collage.jpg');
+    }
+    33% {
+        background-image: url('https://thumbs.dreamstime.com/b/indian-food-collage-portrait-various-buffet-62770881.jpg');
+    }
+    66% {
+        background-image: url('https://as1.ftcdn.net/jpg/02/95/79/40/500_F_295794094_FYz9UTEoBSxqIiLzs5P2kABflTIF0xG5.jpg');
+    }
+}
+.cursor{
+    cursor: pointer;
+}
+.bg-white{
+    background-color: white;
+}
+.container::after{
+    // z-index: 1;
+    // position:relative;
+    background-color: #00000085;
+    opacity: 1;
+    z-index: 10;
+}
+.mat-card {
+    position:relative;
+    z-index: 10;
+    background-color: #000000e8;
+}
+.mat-card ::after{
+    opacity: 0.5;
+    position:absolute;
+    background: green;
+    z-index: -1;
+}

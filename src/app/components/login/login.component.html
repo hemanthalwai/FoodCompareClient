@@ -1,0 +1,29 @@
+<div class="background-wallpaper" fxLayout="column" fxLayoutAlign="center end" style="height:100%;">
+  <mat-card class="mat-card">
+    <mat-card-content class="container">
+      <form formGroupName="loginUser" (ngSubmit)="onSubmit()">
+        <div fxLayout="column" fxFlexLayout="center end" fxFlex="20rem" class="container">
+          <div> 
+            <mat-form-field appearance="outline">
+                <mat-icon matPrefix >person</mat-icon>
+              <input type="text" formComponentName="userName" required placeholder="Username" matInput>
+              <mat-error *ngIf="loginUser.get('userName').errors?.required">
+                This field is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field appearance="outline">
+                <!-- <mat-icon matPrefix>vpn_key</mat-icon> -->
+              <input [type]="(showText)?  'text' : 'password'" formComponentName="password" required placeholder="Password" matInput>
+              <mat-icon class="cursor" matSuffix (click)="showText = !showText;">remove_red_eye</mat-icon>
+            </mat-form-field>
+          </div>
+          <div fxFlex> 
+            <button mat-raised-button color="primary" type="submit" class="button-padding">Login</button>
+          </div>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
