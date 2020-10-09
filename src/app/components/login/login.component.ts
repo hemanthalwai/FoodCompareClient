@@ -6,7 +6,7 @@ import {FormGroup, FormBuilder, Validators} from '@angular/forms';
   styleUrls: ['./login.component.less']
 })
 export class LoginComponent implements OnInit {
-
+  showText = false;
 
   constructor(private fb: FormBuilder) { }
   loginUser = this.fb.group({
@@ -23,6 +23,5 @@ export class LoginComponent implements OnInit {
   public onSubmit() {
     console.log(this.loginUser.status , `loginUser`);
     console.log('Submit clicked', this.loginUser.value);
-    debugger
   }
 }

@@ -8,6 +8,8 @@ import {MaterialModule} from './material.module';
 import { LoginComponent } from './components/login/login.component';
 import { FormBuilder } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [FormBuilder],
   bootstrap: [AppComponent]
